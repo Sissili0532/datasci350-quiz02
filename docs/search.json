@@ -32,7 +32,7 @@
     "href": "life-gdp.html#data-and-visualization",
     "title": "Life Expectancy and GDP per Capita",
     "section": "Data and Visualization",
-    "text": "Data and Visualization\n\nlibrary(ggplot2)\n\n\ngapminder &lt;- read.csv(\"gapminder.csv\")\n\n\nggplot(gapminder, aes(x = gdp_per_capita, y = life_expectancy)) +\n  geom_point(alpha = 0.6) +\n  scale_x_log10() +\n  labs(\n    title = \"Life Expectancy vs GDP per Capita\",\n    x = \"GDP per Capita (log scale)\",\n    y = \"Life Expectancy\"\n  ) +\n  theme_minimal()"
+    "text": "Data and Visualization\n\nlibrary(ggplot2)\n\n\ngapminder &lt;- read.csv(\"gapminder.csv\")\n\n\nggplot(gapminder, aes(x = gdp_per_capita, \n                      y = life_expectancy,\n                      color = continent)) +\n  geom_point(alpha = 0.6) +\n  scale_x_log10() +\n  labs(\n    title = \"Life Expectancy vs GDP per Capita\",\n    x = \"GDP per Capita (log scale)\",\n    y = \"Life Expectancy\",\n    color = \"Continent\"\n  ) +\n  theme_minimal()"
   },
   {
     "objectID": "country.html",
